@@ -97,4 +97,15 @@
          padding: 0 0 0 18px;
       }
    }
+   .menu__list li.header_active::after{
+      content: "";
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      right: 0;
+      height: 3px;
+      width: 100%;
+      background: #FEA55F;
+   }
 }
