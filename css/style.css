@@ -72,6 +72,13 @@ a {
   text-decoration: none;
 }
 
+.link {
+  display: inline-block;
+  margin-top: 200px;
+  font-size: 50px;
+  color: #fff;
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../font/icons/icomoon.eot?693uki");
