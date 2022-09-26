@@ -1,0 +1,25 @@
+@media (max-width:769px){
+   .footer__social{
+      justify-content: end;
+   }
+   .social{
+      &__title{
+         position: absolute;
+         left: 0;
+         border-right: none;
+      }
+      &__link{
+         padding: 0 14px;
+         border-right: none;
+         border-left: 1px solid #1E2D3D;
+         &:last-child{
+            position: relative;
+            font-size: 0;
+            padding: 0 14px;
+            & span{
+               top: 10px;
+            }
+         }
+      }
+   }
+}
