@@ -330,7 +330,7 @@ a {
   }
   .menu {
     position: fixed;
-    top: 0;
+    top: -160%;
     left: 0;
     right: 0;
     width: calc(100% - 2px);
@@ -340,10 +340,9 @@ a {
     -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
     overflow: auto;
-    opacity: 0;
   }
   .menu.menu_active {
-    opacity: 1;
+    top: 0;
   }
   .menu__burger {
     z-index: 3;

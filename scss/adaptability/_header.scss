@@ -9,7 +9,7 @@
    }
    .menu{
       position: fixed;
-      top: 0;
+      top: -160%;
       left: 0;
       right: 0;
       // padding: 60px 0 0 0;
@@ -19,9 +19,8 @@
       border: 1px solid #1E2D3D;
       transition: all 0.5s linear;
       overflow: auto;
-      opacity: 0;
       &.menu_active{
-         opacity: 1;
+         top: 0;
       }
       &__burger{
          z-index: 3;
