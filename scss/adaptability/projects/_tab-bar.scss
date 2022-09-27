@@ -1,0 +1,22 @@
+@media (max-width:769px){
+   .tab-bar{
+      margin: 0;
+      &__inner{
+         padding: 0 0 0 27px;
+         border-bottom: 0;
+      }
+      &__item{
+         padding: 0;
+         border-right: 0;
+      }
+      &__content{
+         & span{
+            display: inline;
+            color: #FFFFFF;
+         }
+         & span:last-child{
+            color: #607B96;
+         }
+      }
+   }
+}

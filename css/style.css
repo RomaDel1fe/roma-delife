@@ -776,7 +776,7 @@ a {
   position: absolute;
   top: 61px;
   bottom: 51px;
-  width: 17.05%;
+  width: 17.1%;
   border: 1px solid #1E2D3D;
 }
 
@@ -828,7 +828,7 @@ a {
 }
 
 .side-bar__list li {
-  position: absolute;
+  position: relative;
   left: -200%;
   margin: 0 0 20px;
   -webkit-transition: all 0.3s linear;
@@ -868,8 +868,8 @@ a {
 .side-bar__filter + label::before {
   content: " ";
   display: inline-block;
-  width: 19px;
-  height: 19px;
+  width: 15px;
+  height: 15px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-box-flex: 0;
@@ -877,7 +877,7 @@ a {
           flex-grow: 0;
   border: 1px solid #607B96;
   border-radius: 2px;
-  margin: 0 15px 0 0;
+  margin: 0 10px 0 0;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 80% 80%;
@@ -925,9 +925,8 @@ a {
   .side-bar {
     display: block;
     position: static;
-    height: 100px;
     width: 100%;
-    margin: 0 0 38px 0;
+    margin: 0 0 30px 0;
     border: 0;
   }
   .side-bar__title {
@@ -941,10 +940,64 @@ a {
     padding: 16px 0 0 0;
   }
   .side-bar__list {
+    position: relative;
+    left: -200%;
     height: 100%;
     width: 100%;
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+  }
+  .side-bar__list.side-bar_active {
+    left: 0;
   }
   .side-bar__item {
     padding: 0 0 0 27px;
+  }
+}
+
+.tab-bar {
+  margin: 0 0 0 17.2%;
+}
+
+.tab-bar__inner {
+  padding: 62px 0 0 0;
+  border-bottom: 1px solid #1E2D3D;
+}
+
+.tab-bar__item {
+  display: inline-block;
+  padding: 10px 30px 10px 15px;
+  border-right: 1px solid #1E2D3D;
+}
+
+.tab-bar__content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #607B96;
+}
+
+.tab-bar__content span {
+  display: none;
+}
+
+@media (max-width: 769px) {
+  .tab-bar {
+    margin: 0;
+  }
+  .tab-bar__inner {
+    padding: 0 0 0 27px;
+    border-bottom: 0;
+  }
+  .tab-bar__item {
+    padding: 0;
+    border-right: 0;
+  }
+  .tab-bar__content span {
+    display: inline;
+    color: #FFFFFF;
+  }
+  .tab-bar__content span:last-child {
+    color: #607B96;
   }
 }

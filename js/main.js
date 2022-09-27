@@ -14,6 +14,6 @@ $(document).ready(function(){
 
 $(document).ready(function(){
    $('.side-bar__title').click(function(event){
-      $('.icon-triangle,.title_text,.side-bar__item').toggleClass('side-bar_active')
+      $('.icon-triangle,.title_text,.side-bar__list,.side-bar__item').toggleClass('side-bar_active')
    })
 })

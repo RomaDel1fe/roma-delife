@@ -19,9 +19,9 @@
    .side-bar{
       display: block;
       position: static;
-      height: 100px;
+      // height: 100px;
       width: 100%;
-      margin: 0 0 38px 0;
+      margin: 0 0 30px 0;
       border: 0;
       &__title{
          padding: 0 0 0 27px;
@@ -34,8 +34,14 @@
          padding: 16px 0 0 0;
       }
       &__list{
+         position: relative;
+         left: -200%;
          height: 100%;
          width: 100%;
+         transition: all 0.1s linear;
+         &.side-bar_active{
+            left: 0;
+         }
       }
       &__item{
          padding: 0 0 0 27px;

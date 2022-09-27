@@ -1,0 +1,23 @@
+.tab-bar {
+   margin: 0 0 0 17.2%;
+   &__inner {
+      padding: 62px 0 0 0;
+      border-bottom: 1px solid #1E2D3D;
+   }
+
+   &__item {
+      display: inline-block;
+      padding: 10px 30px 10px 15px;
+      border-right: 1px solid #1E2D3D;
+   }
+
+   &__content {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: #607B96;
+      & span{
+         display: none;
+      }
+   }
+}
