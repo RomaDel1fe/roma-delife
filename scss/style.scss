@@ -2,9 +2,14 @@
 @import "base/reset";
 @import "base/icons";
 
+// Home page 
 @import "content/header";
 @import "adaptability/header";
 @import "content/main";
 @import "adaptability/main";
 @import "content/footer";
 @import "adaptability/footer";
+
+// Projects page 
+@import "content/projects/side-bar";
+@import "adaptability/projects/side-bar";
