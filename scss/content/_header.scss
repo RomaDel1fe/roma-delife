@@ -37,6 +37,8 @@
       padding: 0 0 0 2.5%;
       color: #607B96;
       background: #010C15;
+      border-top: 2px solid #1E2D3D;
+      border-left: 1px solid #1E2D3D;
       transition: all 0.3s linear;
       z-index: 5;
       &:hover{
@@ -83,7 +85,7 @@
       }
    }
 }
-.menu__list li.header_active>.menu__link{
+.menu__list li.header_active~.menu__link{
    color: #FFFFFF;
 }
 .menu__list li.header_active::after{

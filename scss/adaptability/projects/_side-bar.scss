@@ -1,0 +1,47 @@
+@media (max-width:769px){
+   .projects{
+      border-left: 1px solid #1E2D3D;
+      border-right: 1px solid #1E2D3D;
+      // &__side-bar{
+      //    display: none;
+      // }
+      &__title{
+         display: block;
+         padding: 81px 0 29px 27px;
+         & h2{
+            font-weight: 450;
+            font-size: 14px;
+            line-height: 140%;
+            color: #FFFFFF;
+         }
+      }
+   }
+   .side-bar{
+      display: block;
+      position: static;
+      height: 100px;
+      width: 100%;
+      margin: 0 0 38px 0;
+      border: 0;
+      &__title{
+         padding: 0 0 0 27px;
+         background: #1E2D3D;
+         border-bottom: 0;
+      }
+      &__content{
+         height: 100%;
+         width: 100%;
+         padding: 16px 0 0 0;
+      }
+      &__list{
+         height: 100%;
+         width: 100%;
+      }
+      &__item{
+         padding: 0 0 0 27px;
+      }
+      &__filter{
+
+      }
+   }
+}

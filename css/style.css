@@ -267,6 +267,8 @@ a {
   padding: 0 0 0 2.5%;
   color: #607B96;
   background: #010C15;
+  border-top: 2px solid #1E2D3D;
+  border-left: 1px solid #1E2D3D;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   z-index: 5;
@@ -329,7 +331,7 @@ a {
   color: #fff;
 }
 
-.menu__list li.header_active > .menu__link {
+.menu__list li.header_active ~ .menu__link {
   color: #FFFFFF;
 }
 
@@ -354,15 +356,19 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .header__logo {
+    background: transparent;
+  }
   .menu {
     position: fixed;
     top: -160%;
     left: 0;
     right: 0;
     width: calc(100% - 2px);
-    height: calc(100vh - 52px);
-    background: #011627;
+    height: calc(100vh - 53px);
+    background: #010C15;
     border: 1px solid #1E2D3D;
+    border-bottom: 0;
     -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
     overflow: auto;
@@ -761,6 +767,10 @@ a {
   position: relative;
 }
 
+.projects__title {
+  display: none;
+}
+
 .side-bar {
   display: inline-block;
   position: absolute;
@@ -813,15 +823,20 @@ a {
   padding: 20px 0 0 15%;
 }
 
+.side-bar__list {
+  position: relative;
+}
+
 .side-bar__list li {
-  opacity: 0;
+  position: absolute;
+  left: -200%;
   margin: 0 0 20px;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
 
 .side-bar__list li.side-bar_active {
-  opacity: 1;
+  left: 0;
 }
 
 .side-bar__list li label {
@@ -890,4 +905,46 @@ a {
 
 .icon-triangle.side-bar_active::before {
   color: #FFFFFF;
+}
+
+@media (max-width: 769px) {
+  .projects {
+    border-left: 1px solid #1E2D3D;
+    border-right: 1px solid #1E2D3D;
+  }
+  .projects__title {
+    display: block;
+    padding: 81px 0 29px 27px;
+  }
+  .projects__title h2 {
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+  }
+  .side-bar {
+    display: block;
+    position: static;
+    height: 100px;
+    width: 100%;
+    margin: 0 0 38px 0;
+    border: 0;
+  }
+  .side-bar__title {
+    padding: 0 0 0 27px;
+    background: #1E2D3D;
+    border-bottom: 0;
+  }
+  .side-bar__content {
+    height: 100%;
+    width: 100%;
+    padding: 16px 0 0 0;
+  }
+  .side-bar__list {
+    height: 100%;
+    width: 100%;
+  }
+  .side-bar__item {
+    padding: 0 0 0 27px;
+  }
 }
