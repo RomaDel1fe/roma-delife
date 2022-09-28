@@ -1,0 +1,19 @@
+@media (max-width:1025px){
+   .projects__item{
+      flex: 0 1 45%;
+   }
+}
+
+@media (max-width:769px){
+   .projects__content{
+      padding: 0;
+   }
+   .projects__container{
+      padding: 15px 15px 70px;
+      max-width: 700px;
+      margin: 0 auto;
+   }
+   .projects__item{
+      flex: 0 1 100%;
+   }
+}

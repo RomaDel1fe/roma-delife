@@ -29,6 +29,9 @@ body {
    line-height: 1;
    font-family: 'Fira Code', sans-serif;
    height: 100vh;
+   &::-webkit-scrollbar{
+      width: 0;
+   }
 }
 
 ol, ul {

@@ -1,7 +1,14 @@
 .tab-bar {
+   position: fixed;
+   top: 62px;
+   right: 0;
+   left: 0;
    margin: 0 0 0 17.2%;
+   background: #010C15;
    &__inner {
-      padding: 62px 0 0 0;
+      // padding: 62px 0 0 0;
+      width: 100vw;
+      // width: 100%;
       border-bottom: 1px solid #1E2D3D;
    }
 

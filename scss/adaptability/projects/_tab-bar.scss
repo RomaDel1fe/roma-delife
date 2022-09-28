@@ -1,7 +1,12 @@
 @media (max-width:769px){
    .tab-bar{
       margin: 0;
+      position: static;
+      width: 100%;
+      display: inline-block;
       &__inner{
+         width: 80%;
+         display: inline-block;
          padding: 0 0 0 27px;
          border-bottom: 0;
       }
