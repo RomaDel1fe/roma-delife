@@ -1,0 +1,111 @@
+.projects {
+   // height: 100%;
+   background: #010C15;
+   position: relative;
+   &__title{
+      display: none;
+   }
+   &__side-bar {
+      
+   }
+}
+
+.side-bar {
+   display: inline-block;
+   position: fixed;
+   top: 61px;
+   bottom: 51px;
+   width: 17.1%;
+   border: 1px solid #1E2D3D;
+   &__title {
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 15%;
+      // margin: 61px 0 0;
+      border-bottom: 1px solid #1E2D3D;
+      cursor: pointer;
+      & span{
+         transform: rotate(-90deg) translateY(-25%);
+         transition: all 0.3s linear;
+         &::before{
+            color: #607B96;
+         }
+      }
+      & h3{
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 21px;
+         width: 100%;
+         padding: 10px 0 10px 15px;
+         color: #607B96;
+         transition: all 0.3s linear;
+         &.side-bar_active{
+            color: #FFFFFF;
+         }
+      }
+   }
+   &__content {
+      height: 80%;
+      padding: 20px 0 0 15%;
+   }
+   &__list{
+      position: relative;
+      & li{
+         position: relative;
+         left: -200%;
+         margin: 0 0 20px;
+         transition: all 0.3s linear;
+         &.side-bar_active{
+            left: 0;
+         }
+         & label{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+            color: #607B96;
+         }
+      }
+   }
+   &__filter {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      &+label{
+         display: inline-flex;
+         align-items: center;
+         user-select: none;
+      }
+      &+label::before{
+         content: " ";
+         display: inline-block;
+         width: 15px;
+         height: 15px;
+         flex-shrink: 0;
+         flex-grow: 0;
+         border: 1px solid #607B96;
+         border-radius: 2px;
+         margin: 0 10px 0 0;
+         background-repeat: no-repeat;
+         background-position: center center;
+         background-size: 80% 80%;
+      }
+      &:checked+label::before{
+         background-color: #607B96;
+         background-image: url(../img/icons/checked.svg);
+      }
+      &:not(:disabled):not(:checked)+label:hover::before,
+      &:checked+label:hover::before {
+         box-shadow: 0px 0px 0px 2px rgba(96,123,150,0.3);
+      }
+      &:checked+label{
+         color: #FFFFFF;
+      }
+   }
+}
+.icon-triangle.side-bar_active{
+   transform: rotate(0deg);
+}
+.icon-triangle.side-bar_active::before {
+   color: #FFFFFF;
+}
+

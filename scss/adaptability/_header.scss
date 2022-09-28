@@ -1,0 +1,115 @@
+@media (max-width:769px){
+   body.lock{
+      overflow: hidden;
+   }
+   .header{
+      &__body{
+         justify-content: space-between;
+      }
+      &__logo{
+         background: transparent;
+      }
+   }
+   .menu{
+      position: fixed;
+      top: -160%;
+      left: 0;
+      right: 0;
+      // padding: 60px 0 0 0;
+      width: calc(100% - 2px);
+      height: calc(100vh - 53px);
+      background: #010C15;;
+      border: 1px solid #1E2D3D;
+      border-bottom: 0;
+      transition: all 0.5s linear;
+      overflow: auto;
+      &.menu_active{
+         top: 0;
+      }
+      &__burger{
+         z-index: 3;
+         display: block;
+         position: relative; 
+         top: 1px;
+         padding: 0 0 0 20px;
+         width: 30px;
+         height: 100%;
+         margin: 0 18px 0 0;
+         cursor: pointer;
+         & span,
+         &::before,
+         &::after{
+            position: absolute;
+            left: 20px;
+            height: 2px;
+            width: 18px;
+            background: #607B96;
+            transition: all 0.3s linear;
+         }
+         &::before,
+         &::after{
+            content: "";
+         }
+         &::before{
+            top: 22px;
+         }
+         &::after{
+            bottom: 22px;
+         }
+         & span{
+            top: 50%;
+            transform: scale(1) translateY(-50%);
+            transition: all 0.2s linear;
+         }
+         &.menu_active::before{
+            transform: rotate(45deg);
+            top: 29px;
+         }
+         &.menu_active span{
+            transform: scale(0);
+         }
+         &.menu_active::after{
+            transform: rotate(-45deg);
+            bottom: 29px;
+         }
+      }
+      &__list{
+         display: block;
+         margin: 60px 0 0 0;
+         & li{
+            // width: 100%;
+            border-left: none;
+            border-bottom: 1px solid #1E2D3D;
+            &:nth-child(3){
+               border-left: none;
+               border-right: none;
+               border-bottom: 1px solid #1E2D3D;
+            }
+            &:last-child{
+               position: static;
+               right: none;
+               & a{
+                  float: none;
+                  padding: 0 0 0 18px;
+               }
+            }
+         }
+      }
+      &__link{
+         display: block;
+         line-height: 55px;
+         padding: 0 0 0 18px;
+      }
+   }
+   .menu__list li.header_active::after{
+      content: "";
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      right: 0;
+      height: 3px;
+      width: 100%;
+      background: #FEA55F;
+   }
+}
